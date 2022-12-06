@@ -1,0 +1,445 @@
+/* Editing the navigation bar */
+.topnav {
+	overflow: hidden;
+	flex-direction: column;
+	background-color: rgb(252, 249, 249);
+	float: center;
+	font-weight: bold;
+	text-align: center;
+	grid-column: 1/-1;
+	grid-row: 1/2;
+	top:0;
+  }
+
+/* Hovering over nav */
+.topnav a:hover{
+	color: black;
+  }
+
+/* Clicking on nav */
+.topnav a.active {
+	background-color: #0468aa;
+	flex-direction: column;
+	color: white;
+	text-decoration: underline;
+	text-transform: uppercase;
+  }
+
+
+/*Change the styling for all of the list
+items in the nav section*/
+nav li{
+	display: block;
+	padding:5px 0;
+	width:20%;
+	border:1px solid black;
+	/* display: inline-block; */
+	width: auto;
+}
+
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	background-image: url('../images/background.jpeg');
+	margin-right: auto;
+    margin-left: auto;
+	padding: 10%;
+	font-family: 'Libre Baskerville', sans-serif;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	/* background-color: #0000EE; */
+}
+
+/* Dancing chicken */
+
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion) {
+  .chicken {
+    animation: dissolve 3s linear infinite both;
+  }
+}
+
+.chicken {
+	animation: pulse 1s linear infinite both;
+	/* max-width: 160px; */
+	/* max-height: 50px; */
+	background-color: rgb(200, 255, 0);
+	position: relative;
+	animation-name: example;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+  }
+
+/* this changes the chicken's background */
+  @keyframes example {
+	0%   {background-color:rgb(0, 174, 255); left:0px; top:0px;}
+	50%  {background-color:rgb(0, 238, 255); left:0px; top:200px;}
+	100%  {background-color:rgb(0, 30, 128); left:0px; top:0px;}
+  }
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 44px;
+	font-weight: bold;
+    color: rgb(115, 36, 57);
+	background-color: rgb(200, 255, 0);
+	font-family:'Libre Baskerville', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    }
+/*
+only changes the page youre currently on
+.active{
+	background: rgb(240, 138, 165);
+    text-transform: uppercase;
+	text-align: right;
+    border-radius: 10%;
+    justify-content: right;
+    text-align: right;
+} */
+
+/*Style the images*/
+img{
+	min-width: 150;
+	height: auto;
+    border: 3px solid rgb(255, 0, 200);
+    padding: 5px 5px 10px 10px;
+    border-radius: 25px solid rgb(128, 0, 107);
+    margin: 20px auto;
+	max-width: 60%;
+	background-color: rgb(252, 249, 249);
+	border-radius: 50%;
+
+}
+
+img:hover {
+	background-color: gold;
+  }
+
+figcaption {
+	background-color: rgb(252, 249, 249);
+}
+
+h1, h2, p, footer{
+	background-color: #f1f1f1;
+	background-color: rgb(252, 249, 249);
+}
+
+/*Make the h2 heading match h1*/
+h2, aside{
+	text-align: center;
+	/* font-weight: bold; */
+	font-size: 25px;
+}
+
+p, div, aside{
+	font-size: 18px;
+}
+/*Improve the spacing for paragraphs AND headings*/
+p, h1, h2, aside{
+    padding: 10px;
+}
+
+
+/*Add borders around the main components and some
+space too*/
+header, nav, main, footer{
+	border: 3px solid black;
+	margin: 30px 0;
+	background-color: #f1f1f1;
+
+}
+
+.grid-container {
+	display: grid;
+	/* grid-template-columns: auto auto auto; */
+	padding: 10px;
+	overflow: scroll;
+	background-color: rgb(252, 249, 249);
+	grid-gap: 10px;
+	flex-wrap: wrap;
+  }
+/* this is how we make the background text boxes a lighter color*/
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	flex-wrap: wrap;
+  }
+
+/* .box {
+	background-color: #f1f1f1;
+	color: black;
+	border-radius: 5px;
+	border: 2px #0000EE solid;
+  }
+
+.a {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+  } */
+
+
+/* Container for the contact form*/
+.contact{
+    padding: 20px;
+	font-family: 'Libre Baskerville', sans-serif;
+	font-size: 14px;
+	background-color: rgb(252, 249, 249);
+    border-radius: 80px;
+    display: block;
+    grid-template-columns: 250px 250px;
+    row-gap: 40px;
+    text-align: stretch;
+    justify-content: space-between;
+  }
+
+/* .skip {
+      text-align: right;
+      font-size: 20px;
+      position: relative;
+      right: 500px;
+} */
+
+  .skip {
+	position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 4px;
+    height: 4px;
+    overflow: hidden
+  }
+
+.skip:focus{
+	margin-top: 50px;
+	 background-color: #000000;
+	 position: static;
+	 color: white;
+	 width: auto;
+	 height: auto;}
+
+/* foot style */
+footer{
+	font-family:'Libre Baskerville', sans-serif;
+	background-color: #555;
+	text-align: center;
+	font-size: 10px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 10px;
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+	/* flex: 100%; */
+	/* max-width: 100%; */
+	padding: 4px;
+	background-color: #f1f1f1;
+  }
+
+  .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	/* width: 100%; */
+	max-width: 25%;
+	background-color: #f1f1f1;
+  }
+
+/* this is the tablet view */
+@media all and (min-width: 700px){
+
+	.topnav {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: none;
+		flex-direction: row;
+
+	}
+
+	topnav a{
+        flex-direction: row;
+	}
+
+/* this flips the nav bar around */
+	nav li {
+		display: block;
+		padding:5px 0;
+		width:20%;
+		border:1px solid black;
+		display: inline-block;
+		width: auto;
+	  }
+
+    header img{
+        width: 400px;
+        height: auto;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+	img{
+		min-width: 150;
+		height: auto;
+		border: 3px solid rgb(255, 0, 200);
+		padding: 5px 5px 10px 10px;
+		border-radius: 25px solid rgb(128, 0, 107);
+		margin: 20px auto;
+		max-width: 60%;
+		background-color: rgb(252, 249, 249);
+		border-radius: 0%;
+
+	}
+
+}
+
+.row {
+	display: flex;
+	/* flex-wrap: wrap;
+	padding: 0 10px; */
+  }
+
+  /* Create four equal columns that sits next to each other */
+  .column {
+	flex: 100%;
+	max-width: 100%;
+	padding: 4px;
+	background-color: #f1f1f1;
+
+  }
+
+  .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	max-width: 25%;
+	background-color: #f1f1f1;
+  }
+
+
+/* this is the desktop view */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 1200px) {
+	.column {
+	  flex: 50%;
+	  max-width: 50%;
+	  flex-direction: row;
+	}
+
+	@media (prefers-reduced-motion) {
+		.chicken {
+		  animation: dissolve shake 0.5s;
+		}
+	  }
+
+	.chicken:hover {
+		/* Start the shake animation and make the animation last for 0.5 seconds */
+		animation: shake 0.5s;
+
+		/* When the animation is finished, start again */
+		animation-iteration-count: infinite;
+	  }
+
+	  @keyframes shake {
+		0% { transform: translate(1px, 1px) rotate(0deg); }
+		10% { transform: translate(-1px, -2px) rotate(-1deg); }
+		20% { transform: translate(-3px, 0px) rotate(1deg); }
+		30% { transform: translate(3px, 2px) rotate(0deg); }
+		40% { transform: translate(1px, -1px) rotate(1deg); }
+		50% { transform: translate(-1px, 2px) rotate(-1deg); }
+		60% { transform: translate(-3px, 1px) rotate(0deg); }
+		70% { transform: translate(3px, 1px) rotate(-1deg); }
+		80% { transform: translate(-1px, -1px) rotate(1deg); }
+		90% { transform: translate(1px, 2px) rotate(0deg); }
+		100% { transform: translate(1px, -2px) rotate(-1deg); }
+	  }
+  }
+
+
+
+/* this changes up the view based on screen size */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+	.column {
+	  flex: 100%;
+	  max-width: 100%;
+	  flex-direction: row;
+	}
+  }
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	height: auto
+  }
+
+.flex-container > div {
+	font-size: 20px;
+	text-align: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+  }
+
+.flex-container > div > img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	flex-wrap: wrap;
+  }
+
+.grid-item2 {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+	flex-wrap: wrap;
+  }
+
+/* Create a table for food ratings */
+* {
+	box-sizing: border-box;
+	border: 3px black;
+  }
+
+  /* Create four equal columns that floats next to each other */
+  .columnchart {
+	float: left;
+	background-color: #f1f1f1;
+	/* width: %; */
+	padding: 5px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	background-color: #f1f1f1;
+	display: table;
+	clear: both;
+	flex-direction: row;
+  }
+
+  .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	/* width: 100%; */
+	max-width: 25%;
+	background-color: #f1f1f1;
+	border-radius: 50%;
+  }
+
+	footer{
+	background-color: rgb(252, 249, 249);
+}
+
